@@ -6,7 +6,8 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "prepare": "husky"
+        "prepare": "husky",
+        "lint": "npx lint-staged"
     },
     "dependencies": {
         "pinia": "^2.1.7",
