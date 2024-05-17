@@ -1,22 +1,22 @@
 name: Auto lint when pull request
 
 on:
-	pull_request:
-		branches:
-			- main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-	test:
-		runs-on: ubuntu-lastest
+  test:
+    runs-on: ubuntu-latest
 
-	env:
-		MODE: "dev"
+  env:
+    MODE: "dev"
 
-	steps:
-		- uses: actions/checkout@v3
-		
-		- name: Install dependencies
-		  run: npm install -f
+  steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install dependencies
+      run: npm install -f
 
-		- name: Lint and format code
-		  run: npx lint
+    - name: Lint and format code
+      run: npx lint
